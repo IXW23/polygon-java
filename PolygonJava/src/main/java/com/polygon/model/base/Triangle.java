@@ -1,4 +1,5 @@
 package com.polygon.model.base;
+import java.util.Objects;
 
 public abstract class Triangle extends Polygon {
     private final double sideA;
@@ -24,5 +25,33 @@ public abstract class Triangle extends Polygon {
         return sideC;
     }
 
+    @Override
+    public double getArea() {
+        return .5 * sideA * getHeight();
+    }
 
+    @Override
+    public double getPerimeter() {
+        return  sideA + sideB + sideC;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(this == obj) return true;
+        if(obj== null || getClass() != obj.getClass()) return false;
+        if(!super.equals(obj)) return false;
+        Triangle triangle = (Triangle) obj;
+        return Double.compare(sideA, triangle.sideA) == 0 && Double.compare(sideB, triangle.sideB) == 0
+                && Double.compare(sideC, triangle.sideC) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), sideA, sideB, sideC);
+    }
+
+    @Override
+    public String toString() {
+        return "Triangle";
+    }
 }

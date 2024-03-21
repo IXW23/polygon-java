@@ -13,7 +13,6 @@ public abstract class Quadrilateral extends Polygon {
         this.sideB = sideB;
         this.sideC = sideC;
         this.sideD = sideD;
-
     }
 
     public double getSideA() {

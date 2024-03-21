@@ -13,6 +13,10 @@ public abstract class Polygon implements Height {
         return numberOfSides;
     }
 
+    public double getInteriorAngle() {
+        return (numberOfSides - 2) * 180;
+    }
+
     protected abstract double getArea();
     protected abstract double getPerimeter();
 
