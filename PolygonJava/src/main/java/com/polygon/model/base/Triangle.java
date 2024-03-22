@@ -27,7 +27,7 @@ public abstract class Triangle extends Polygon {
 
     @Override
     public double getArea() {
-        return .5 * sideA * getHeight();
+        return .5 * sideB * getHeight();
     }
 
     @Override
